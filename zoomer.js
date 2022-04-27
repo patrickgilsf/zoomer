@@ -20,8 +20,10 @@ deviceList.forEach(item => {
   }
 });
 if (path) {
-  console.log(`patth(S{path}) found!`);
+  console.log(`path (${path}) found!`);
   var device = new HID.HID(path);
+} else {
+  console.log('No controller plugged in');
 }
 
 
@@ -47,7 +49,7 @@ const unmuteMicStartVid = () => {
 
 var checkStatus = function() {
     console.log('Checking status...');
-    exec('osascript get-zoom-status_with-video.scpt', (error, stdout, stderr) => {
+    exec('zoomer', (error, stdout, stderr) => {
         console.log(stdout);
         if (error) {
             console.error(`exec error: ${error}`);
