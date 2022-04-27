@@ -1,8 +1,9 @@
 {
-  "name": "zoomer",
-  "version": "1.0.0",
+  "name": "@patrickgilsf/zoomer",
+  "version": "1.0.2",
   "description": "A Musket for the Zoom Revolution",
   "main": "zoomer.js",
+  "bin": "./zoomer.js",
   "scripts": {
     "start": "zoomer.js"
   },
@@ -13,10 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickgilsf/node-hid.git"
+    "url": "git+https://github.com/patrickgilsf/zoomer.git"
   },
   "bugs": {
-    "url": "https://github.com/patrickgilsf/node-hid/issues"
+    "url": "https://github.com/patrickgilsf/zoomer/issues"
   },
-  "homepage": "https://github.com/patrickgilsf/node-hid#readme"
+  "homepage": "https://github.com/patrickgilsf/zoomer#readme",
+  "devDependencies": {}
 }
