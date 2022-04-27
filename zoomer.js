@@ -44,7 +44,7 @@ const unmuteMicStartVid = () => {
 
 var checkStatus = function() {
     console.log('Checking status...');
-    exec('osascript get-zoom-status_with-video.scpt', (error, stdout, stderr) => {
+    exec('zoomer.scpt', (error, stdout, stderr) => {
         console.log(stdout);
         if (error) {
             console.error(`exec error: ${error}`);
