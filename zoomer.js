@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 //node HID import
 var HID = require('node-hid');
 const { exec } = require('child_process');
