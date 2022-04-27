@@ -1,0 +1,22 @@
+{
+  "name": "zoomer",
+  "version": "1.0.0",
+  "description": "A Musket for the Zoom Revolution",
+  "main": "zoomer.js",
+  "scripts": {
+    "start": "zoomer.js"
+  },
+  "author": "Patrick Gilligan",
+  "license": "ISC",
+  "dependencies": {
+    "node-hid": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickgilsf/node-hid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patrickgilsf/node-hid/issues"
+  },
+  "homepage": "https://github.com/patrickgilsf/node-hid#readme"
+}
