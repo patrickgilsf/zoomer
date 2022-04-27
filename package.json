@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "A Musket for the Zoom Revolution",
   "main": "zoomer.js",
-  "bin": "./zoomer.js",
+  "bin": "./Applications/Zoomer/node_modules/@patrickgilsf/zoomer/zoomer.js",
   "scripts": {
     "start": "zoomer.js"
   },
