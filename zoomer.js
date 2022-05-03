@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 //node HID import
 var HID = require('node-hid');
 const { exec } = require('child_process');
@@ -47,7 +49,7 @@ const unmuteMicStartVid = () => {
 
 var checkStatus = function() {
     console.log('Checking status...');
-    exec('zoomer', (error, stdout, stderr) => {
+    exec('osascript zoomer.scpt', (error, stdout, stderr) => {
         console.log(stdout);
         if (error) {
             console.error(`exec error: ${error}`);
