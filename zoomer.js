@@ -48,25 +48,37 @@ const unmuteMicStartVid = () => {
 
 
 var checkStatus = function() {
-    console.log('Checking status...');
+    // console.log("Attempting to fire apple script. If there are multiple attempts, Zoom not be open")
     exec('osascript zoomer.scpt', (error, stdout, stderr) => {
-        console.log(stdout);
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-
-        var status = JSON.parse(stdout);
+      console.log('Running Apple Script...');
+      console.log('apple script status: ',stdout);
+      if (error) {
+          console.error(`exec error: ${error, stderr}`);
+          return;
+      }
+      var status = JSON.parse(stdout);
+      // console.log(status)
+      if (status.stat == "closed") {
+        console.log("you need to open Zoom");
+      } else if (status.stat == "open") {
+        console.log("Are you sure you are in a Zoom meeting right now?")
+      };
+      if (status.stat == "call") {
+        // console.log('zoom is open');
         if (status.mute == "muted" && status.video == "stop") {
+          console.log('mic and camera red');
           muteMicStopVid();
         } else if (status.mute == "muted" && status.video == "start") {
+          console.log('mic red');
           muteMicStartVid();
         } else if (status.mute == "unmuted" && status.video == "stop") {
+          console.log('camera red');
           unmuteMicStopVid();
-        } else if (status.mute == "unmuted" && status.video == "startd") {
+        } else if (status.mute == "unmuted" && status.video == "start") {
+          console.log('mic and cam are on');
           unmuteMicStartVid();
         }
-
+      } 
     });
 }
 
