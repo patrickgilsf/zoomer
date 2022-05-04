@@ -1,6 +1,9 @@
 {
   "name": "@patrickgilsf/zoomer",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "bin": {
+    "zoomer": "./zoomer"
+  },
   "description": "A Musket for the Zoom Revolution",
   "main": "zoomer.js",
   "scripts": {
